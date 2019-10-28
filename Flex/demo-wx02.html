@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>使用弹性盒模型布局微信界面</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            height: 100vh;
+            flex-direction: column ;
+        }
+        main{
+            background-color: #ddd;
+            flex: 1;
+        }
+        footer{
+            background: linear-gradient(to top,#f3f3f3,#ddd,#f3f3f3);    
+            height: 60px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        footer div{
+            flex: 1;
+            text-align: center;
+            line-height: 3em;
+            color: #555;
+        }
+
+        footer div:nth-child(n+2){
+            border-left: solid 1px #ddd;
+        }
+    </style>
+</head>
+<body>
+    <main>1</main>
+    <footer>
+        <div>test</div>
+        <div>test</div>
+        <div>test</div>
+    </footer>
+</body>
+</html>
