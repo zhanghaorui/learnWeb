@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BOM01</title>
+    <script>
+        function Testconfirm() {
+            //  带有确定和取消的对话框
+            var res = window.confirm("是否退出");
+            if (res) {
+                //   弹出框
+                // alert("true");
+                //  关闭浏览器
+                window.close();
+            } else {
+                alert("false");
+            }
+        }
+
+
+        //   按确定 返回  prompt方法的第二个参数    
+        //   按取消 返回  null
+        function TestPrompt() {
+            var ress = window.prompt("请输入密码", "123");
+            alert(ress);
+        }
+
+
+        //  moveBy   和  moveTo
+
+        function TestMoveBy() {
+            window.moveBy(50, 50);
+        }
+
+        function TestMoveTo() {
+            window.moveTo(250, 250);
+        }
+
+        //  resizeBy 和 resizeTo
+
+        function TestResizeBy() {
+            window.resizeBy(50, 50);
+        }
+
+        function TestResizeTo() {
+            window.resizeTo(350, 350);
+        }
+
+
+        //  scrollBy 和 scrollTo
+
+        function TestScrollBy() {
+            window.scrollBy(50, 50);
+        }
+
+        function TestScrollTo() {
+            window.scrollTo(150, 150);
+        }
+
+
+        //  Open   1. 打开新窗口的url  2. 窗口的名字 3. 弹出页面的特殊值  位置 宽高等 要不要地址栏  工具条 状态栏等等
+        function TestOpen() {
+            window.open("www.baidu.com", "bd", "left = 200");
+        }
+
+
+        function showTime() {
+            var date = new Date();
+            var year = date.getHours();
+            var month = date.getMinutes();
+            var day = date.getSeconds();
+            const data = year + '-' + month + '-' + day;
+            // console.log(data);
+            document.getElementById("display").innerHTML = year + '-' + month + '-' + day;
+        }
+
+        var t = window.setInterval("showTime()", 1000);
+    </script>
+</head>
+
+<body>
+    <input type="button" value="touchIt" onclick="Testconfirm()"><br>
+    <input type="button" value="prompt" onclick="TestPrompt()"><br>
+
+    <!--这些方法 仅仅在IE浏览器中生效   -->
+    <input type="button" value="moveBy" onclick="TestMoveBy()"><br>
+    <input type="button" value="moveTo" onclick="TestMoveTo()"><br>
+    <input type="button" value="resizeBy" onclick="TestResizeBy()"><br>
+    <input type="button" value="resizeTo" onclick="TestResizeTo()"><br>
+
+
+    <!--  通用性好 -->
+
+    <input type="button" value="scrollBy" onclick="TestScrollBy()"><br>
+    <input type="button" value="scrollTo" onclick="TestScrollTo()"><br>
+
+    <input type="button" value="open" onclick="TestOpen()"><br>
+
+
+    <div id="display">
+
+    </div>
+
+
+</body>
+
+</html>

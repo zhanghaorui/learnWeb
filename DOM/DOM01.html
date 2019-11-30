@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>使用getElementById方法查找元素</title>
+    <script>
+        function showContent() {
+            with(document) {}
+            var div1 = document.getElementById("div");
+            var textName1 = document.getElementById("textName");
+            var content1 = document.getElementById("content");
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div">minediv</div>
+    <textarea name="" id="content" cols="30" rows="10"></textarea>
+    <input type="text" name="" id="textName">
+    <input type="button" value="访问3个元素的内容" id="btn" onclick="showContent()">
+
+</body>
+
+</html>
